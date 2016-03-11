@@ -2,6 +2,6 @@
 #
 # local.bash - Custom path settings etc
 #
-GO15VENDOREXPERIMENT=1
 export GOPATH=$HOME/src/go_path
 pathmunge $GOPATH/bin after
+pathmunge /usr/local/sbin after
