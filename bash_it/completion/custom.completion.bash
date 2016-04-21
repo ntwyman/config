@@ -17,3 +17,8 @@ function _go_prj {
 
 complete -F _prj prj
 complete -F _go_prj gprj
+
+if command -v yotta >/dev/null 2>&1; then
+    eval "$(register-python-argcomplete yotta)"
+    eval "$(register-python-argcomplete yt)"
+fi
