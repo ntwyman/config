@@ -16,6 +16,12 @@ if [ -d $HOME/.cargo/bin ]; then
     pathmunge $HOME/.cargo/bin
 fi
 
+if [ -d $HOME/.pyenv/ ]; then
+    export PYENV_ROOT=$HOME/.pyenv
+    pathmunge $HOME/.pyenv/bin
+    eval "$(pyenv init -)"
+fi
+
 if [ -d $HOME/.opam/opam-init/ ]; then
    source /Users/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null
 fi
