@@ -25,3 +25,7 @@ fi
 if [ -d $HOME/.opam/opam-init/ ]; then
    source /Users/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null
 fi
+
+if [ -d $HOME/Library/Arcanist/ ]; then
+   pathmunge $HOME/Library/Arcanist/arcanist/bin after
+fi
