@@ -23,6 +23,7 @@ make_bash_link() {
 make_bash_link "aliases/custom.aliases.bash"
 make_bash_link "completion/custom.completion.bash"
 make_bash_link "custom/local.bash"
+make_bash_link "custom/all_elixir_auto_complete.bash"
 make_bash_link "plugins/custom.plugins.bash"
 
 #########################################

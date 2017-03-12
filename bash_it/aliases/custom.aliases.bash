@@ -10,3 +10,7 @@ alias E='SUDO_EDITOR="emacsclient" sudo -e'
 # And the truly custom stuff
 alias src='cd ~/src/'
 alias ke='emacsclient -e '"'(kill-emacs)'"
+
+# Override some ones that don't work as expected
+alias gd='git diff'
+alias subl='open -a Sublime\ Text'
