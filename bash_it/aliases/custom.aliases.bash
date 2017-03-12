@@ -9,6 +9,7 @@ alias E='SUDO_EDITOR="emacsclient" sudo -e'
 
 # And the truly custom stuff
 alias src='cd ~/src/'
+alias nrt='cd ~/src/analytics'
 alias ke='emacsclient -e '"'(kill-emacs)'"
 
 # Override some ones that don't work as expected
