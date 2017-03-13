@@ -25,5 +25,8 @@
                 (select-frame frame)
                 (load-theme my-theme t)))
   (load-theme my-theme t))
+
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+
 (provide 'custom)
 ;;; custom.el ends here
