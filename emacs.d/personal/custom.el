@@ -26,7 +26,7 @@
                 (load-theme my-theme t)))
   (load-theme my-theme t))
 
-(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(load (expand-file-name "~/.quicklisp/slime-helper.el") :missing-ok)
 
 (provide 'custom)
 ;;; custom.el ends here
