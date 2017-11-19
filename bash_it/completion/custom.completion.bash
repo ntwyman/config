@@ -15,8 +15,16 @@ function _go_prj {
     return 0
 }
 
+function __from_exercism_config {
+    COMPREPLY=()
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=($(compgen -W 'demo debug configure fetch restore submit unsubmit tracks download help' -- $cur))
+}
+
+
 complete -F _prj prj
 complete -F _go_prj gprj
+complete -F __from_exercism_config -o default exercism
 
 if command -v yotta >/dev/null 2>&1; then
     eval "$(register-python-argcomplete yotta)"
