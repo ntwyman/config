@@ -22,6 +22,12 @@ if [ -d $HOME/.pyenv/ ]; then
     eval "$(pyenv init -)"
 fi
 
+if [ -d /usr/local/cuda/bin ]; then
+    pathmunge /usr/local/cuda/bin after
+    export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+
+
 if [ -d $HOME/.opam/opam-init/ ]; then
    source /Users/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null
 fi

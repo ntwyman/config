@@ -26,6 +26,10 @@
                 (load-theme my-theme t)))
   (load-theme my-theme t))
 
+(global-hl-line-mode 1)
+(set-face-background 'hl-line monokai-gray)
+(set-face-foreground 'highlight nil)
+
 (load (expand-file-name "~/.quicklisp/slime-helper.el") :missing-ok)
 
 (provide 'custom)
