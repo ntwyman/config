@@ -18,8 +18,14 @@ fi
 
 if [ -d $HOME/.pyenv/ ]; then
     export PYENV_ROOT=$HOME/.pyenv
-    pathmunge $HOME/.pyenv/bin
+    if [ -d $PYENV_ROOT/bin ]; then
+        pathmunge $HOME/.pyenv/bin
+    fi
     eval "$(pyenv init -)"
+fi
+
+if [ -d $HOME/.local/bin ]; then
+    pathmunge $HOME/.local/bin
 fi
 
 if [ -d /usr/local/cuda/bin ]; then
