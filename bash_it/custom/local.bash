@@ -55,3 +55,14 @@ if [ -d "$HOME/.nvm" ]; then
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+SEL4_DOCKER_DIR="$HOME/src/seL4-CAmkES-L4v-dockerfiles"
+if [ -d $SEL4_DOCKER_DIR ]; then
+    function s4c() {
+        if [[ $# > 0 ]]; then
+            make -C $SEL4_DOCKER_DIR user HOST_DIR=$(pwd) EXEC="bash -c '""$@""'"
+        else
+            make -C $SEL4_DOCKER_DIR user HOST_DIR=$(pwd)
+        fi
+    }
+fi
