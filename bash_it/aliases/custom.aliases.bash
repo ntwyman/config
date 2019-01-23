@@ -21,3 +21,7 @@ alias subl='open -a Sublime\ Text'
 if [ `command -v jq` ]; then
     alias jp="jq '.'"
 fi
+
+if [ -d /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin ]; then
+	alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+fi

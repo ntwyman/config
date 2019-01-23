@@ -9,7 +9,6 @@ fi
 export GOPATH=$HOME/src/go_path
 
 pathmunge $GOPATH/bin after
-
 pathmunge /usr/local/sbin after
 
 if [ -d $HOME/.cargo/bin ]; then
@@ -32,7 +31,6 @@ if [ -d /usr/local/cuda/bin ]; then
     pathmunge /usr/local/cuda/bin after
     export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
-
 
 if [ -d $HOME/.opam/opam-init/ ]; then
    source /Users/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null
@@ -66,3 +64,5 @@ if [ -d $SEL4_DOCKER_DIR ]; then
         fi
     }
 fi
+
+export AWS_VAULT_KEYCHAIN_NAME=login
