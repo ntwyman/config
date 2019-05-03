@@ -23,6 +23,7 @@ function __from_exercism_config {
 
 
 complete -F _prj prj
+complete -F _prj pjr
 complete -F _go_prj gprj
 complete -F __from_exercism_config -o default exercism
 
