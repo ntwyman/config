@@ -7,26 +7,6 @@ make_link() {
 }
 
 #########################################
-#  Bash
-#########################################
-
-BASH_IT_DIR="${HOME}/.bash_it"
-if [ ! -d $BASH_IT_DIR ]; then
-   git clone --depth=1 git@github.com:ntwyman/bash-it.git $BASH_IT_DIR
-fi
-
-# make_bash_link rel_path
-make_bash_link() {
-    make_link $1 "$DIR/bash_it" $BASH_IT_DIR
-}
-
-make_bash_link "aliases/custom.aliases.bash"
-make_bash_link "completion/custom.completion.bash"
-make_bash_link "custom/local.bash"
-make_bash_link "custom/all_elixir_auto_complete.bash"
-make_bash_link "plugins/custom.plugins.bash"
-
-#########################################
 #  Emacs
 #########################################
 
