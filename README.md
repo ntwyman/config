@@ -1,3 +1,10 @@
+#
+ARCHIVED
+
+I have since moved over to using [ZSH and ZPrezto](https://github.com/ntwyman/prezto) and VS Studio Remote in place of local emacs on headless systems
+
+
+
 # config
 Various config files I share between machines (Macs)
 
